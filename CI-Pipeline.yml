@@ -4,17 +4,15 @@
 # https://aka.ms/yaml
 
 pool:
-   name: local
+  name: local
+  vmImage: 'ubuntu-latest'
    
 trigger:
 - main
 
 variables:
   function_app_name: 'HelloApp'
-
-pool:
-  vmImage: 'ubuntu-latest'
-
+  
 steps:
 - task: UsePythonVersion@0
   inputs:
